@@ -2,20 +2,20 @@
 Code for Amazon Robot Challenge <br>
 
 ## Platform
-Ubuntu 14.04 STL + ROS indigo + UR5 <br>
+Ubuntu 14.04 STL + ROS indigo + UR5 + Moveit <br>
 
 ## Install
 
 ```
-1. git clone git@github.com:qqfly/arc.git
-2. rosdep install --from-paths . --ignore-src --rosdistro indigo
-3. catkin_make
+1. git clone https://github.com/qqfly/arc.git
+2. rosdep install --from-paths . --ignore-src --rosdistro indigo (前两步在src里运行)
+3. catkin_make（在工作空间内编译，例如catkin_ws）
 ```
 
 ## 使用步骤
 ### 仿真
 ```
-1. roslaunch ur5_moveit_config demo_sim.launch
+1. roslaunch ur5_moveit_config demo.launch
 2. rosrun moveit_ur5_interface planning
 3. 参照moveit_ur5_interface/planning/src/planning.cpp写自己的代码，控制机器人
 ```
